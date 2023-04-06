@@ -1,0 +1,255 @@
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul {
+  list-style: none;
+  position: absolute;
+  background-color: var(--Off-white);
+  color: var(--Very-dark-blue);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  width: 50%;
+  padding-top: 100px;
+  padding-left: 30px;
+  font-size: 15px;
+  /* padding: 10px 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* display: none; */
+  transform: scaleX(0);
+  transition: 0.4s ease-in-out;
+  transform-origin: right;
+}
+ul.active{
+  transform: scaleX(1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  /* padding: 10px 15px; */
+  position: relative;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.bar {
+  padding: 2px 40px;
+  background-color: black;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.bar1.active {
+  transform: rotate(45deg);
+  top: 22px;
+}
+.bar2.active {
+  opacity: 0;
+}
+.bar3.active {
+  transform: rotate(-45deg);
+  bottom: 10px;
+}
+/* desktop design */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    transform: scaleX(1);
+    height: auto;
+    width: auto;
+    font-size: 17px;
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+}
+ /* nav bar ends here */
+
+.left img {
+  padding-top: 30px;
+  height: 40vh;
+}
+.left h1 {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 45px;
+  padding-top: 20px;
+}
+.left p {
+  padding-top: 20px;
+  color: var(--Dark-grayish-blue);
+  font-size: 18px;
+  line-height: 25px;
+  /* padding-bottom: 20px; */
+}
+
+.left button {
+  background-color: var(--Soft-red);
+  color: white;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.left button:hover {
+  background-color: var(--Very-dark-blue);
+}
+.right {
+  background-color: var(--Very-dark-blue);
+  height: 93vh;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.right h2 {
+  color: var(--Soft-orange);
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.right h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+.right p {
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 30px;
+  font-size: 14.7px;
+  line-height: 25px;
+}
+.right1 {
+  border-bottom: 1px solid var(--Dark-grayish-blue);
+  margin-bottom: 20px;
+}
+.right2 {
+  border-bottom: 1px solid var(--Dark-grayish-blue);
+  margin-bottom: 20px;
+}
+
+/* =======Desktop design========== */
+
+@media all and (min-width: 768px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .left1 {
+    display: flex;
+    width: 60vw;
+  }
+
+  .left img {
+    width: 60vw;
+    height: 50vh;
+  }
+  .left p {
+    padding-top: 20px;
+    color: var(--Dark-grayish-blue);
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .right {
+    background-color: var(--Very-dark-blue);
+    height: 78vh;
+    margin-top: 30px;
+    margin-right: -25px;
+    width: 23vw;
+  }
+  .left button {
+    margin-top: 35px;
+  }
+  .left h1 {
+    line-height: 50px;
+  }
+}
+/* ===========end of section1========= */
+
+.section2 {
+  margin-top: 50px;
+}
+.section2 img {
+  width: 90px;
+}
+.flex1 {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.flex1 h2 {
+  color: var(--Dark-grayish-blue);
+  font-size: 30px;
+}
+.flex1 h4 {
+  color: var(--Very-dark-blue);
+  font-weight: 900;
+  font-size: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.flex1 h4:hover {
+  color: var(--Soft-red);
+}
+.flex1 p {
+  color: var(--Dark-grayish-blue);
+  font-size: 13px;
+  line-height: 22px;
+}
+
+/* =======Desktop design========== */
+@media all and (min-width: 768px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .all2 {
+    display: flex;
+    gap: 40px;
+    /* border: 1px solid rebeccapurple;  */
+    width: 90vw;
+  }
+  .flex1 p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .flex1 h4 {
+    font-size: 19px;
+  }
+  /* .flex1 h4:hover{
+        color: var(--Soft-red);
+    } */
+}
